@@ -36,6 +36,7 @@ header {
 
         span {
             font-size: 30px;
+            margin-left: 10px;
         }
 
     }
