@@ -22,8 +22,15 @@ export default {
 
   methods: {
     getCardsYuGiOh() {
+      let myAdress = store.apiInd
+
+      if (store.selectContent != "") {
+        myAdress += `?${store.selectType}=${store.selectContent}`
+      }
+
       axios
-        .get(store.apiInd)
+
+        .get(myAdress)
         .then((res) => {
           store.cardsYuArr = res.data.data; // Assegna direttamente i dati ricevuti
           store.loading = false;
@@ -31,7 +38,7 @@ export default {
         })
         .catch((err) => {
           console.error("Errore:", err);
-        });
+        })
 
     }
   },

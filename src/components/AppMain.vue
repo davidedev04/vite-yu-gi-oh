@@ -16,6 +16,11 @@ export default {
 </script>
 
 <template>
+    <div>
+        <select  name="" id="">
+            <option value=""></option>
+        </select>
+    </div>
     <main>
         <div class="cards" v-for="item in store.cardsYuArr" :key="item">
             <yugiohCard :descrizione="item" />
