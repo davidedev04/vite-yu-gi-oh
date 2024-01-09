@@ -19,7 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    width: 100vw;
+    width: calc(100vw - 17px);
     height: 80px;
     background-color: #fff;
     display: flex;

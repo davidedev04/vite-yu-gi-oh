@@ -6,8 +6,8 @@ import { store } from '../store';
 export default {
     name: "AppMain",
     components: { yugiohCard },
-    data(){
-        return{
+    data() {
+        return {
             store
         }
     }
@@ -17,7 +17,7 @@ export default {
 
 <template>
     <main>
-        <div class="container" v-for="item in store.cardsYuArr" :key="item">
+        <div class="cards" v-for="item in store.cardsYuArr" :key="item">
             <yugiohCard :descrizione="item" />
         </div>
     </main>
@@ -25,12 +25,15 @@ export default {
 
 <style lang="scss" scoped>
 main {
-    width: 100%;
-    height: calc(100vh - 80px);
-    background-color: #d48f38;
+    width: calc(100vw - 17px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
-    .container{
-        background-color: #fff;
+    .cards {
+        width: 20%;
     }
 
 }
